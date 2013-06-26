@@ -37,6 +37,7 @@
 		89007E7B177B66960084472A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7A177B66960084472A /* AVFoundation.framework */; };
 		89007E7D177B66A80084472A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7C177B66A80084472A /* CoreVideo.framework */; };
 		89007E7F177B66B30084472A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7E177B66B30084472A /* QuartzCore.framework */; };
+		89007E82177B67100084472A /* ProductModal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89007E80177B67100084472A /* ProductModal.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		89007E7A177B66960084472A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		89007E7C177B66A80084472A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		89007E7E177B66B30084472A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		89007E81177B67100084472A /* ProductModal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModal.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				89007E34177B662B0084472A /* CTDetailViewController.h */,
 				89007E35177B662B0084472A /* CTDetailViewController.m */,
 				89007E2E177B662B0084472A /* ToxinScanner.xcdatamodeld */,
+				89007E80177B67100084472A /* ProductModal.xcdatamodeld */,
 				89007E17177B662B0084472A /* Supporting Files */,
 			);
 			path = ToxinScanner;
@@ -410,6 +413,7 @@
 				89007E30177B662B0084472A /* ToxinScanner.xcdatamodeld in Sources */,
 				89007E33177B662B0084472A /* CTMasterViewController.m in Sources */,
 				89007E36177B662B0084472A /* CTDetailViewController.m in Sources */,
+				89007E82177B67100084472A /* ProductModal.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +631,16 @@
 			);
 			currentVersion = 89007E2F177B662B0084472A /* ToxinScanner.xcdatamodel */;
 			path = ToxinScanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		89007E80177B67100084472A /* ProductModal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89007E81177B67100084472A /* ProductModal.xcdatamodel */,
+			);
+			currentVersion = 89007E81177B67100084472A /* ProductModal.xcdatamodel */;
+			path = ProductModal.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
