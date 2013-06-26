@@ -12,7 +12,7 @@
 
 #import <CoreData/CoreData.h>
 
-@interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,ZBarReaderDelegate>
 
 @property (strong, nonatomic) CTDetailViewController *detailViewController;
 

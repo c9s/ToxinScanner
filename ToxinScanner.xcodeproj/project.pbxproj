@@ -38,6 +38,7 @@
 		89007E7D177B66A80084472A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7C177B66A80084472A /* CoreVideo.framework */; };
 		89007E7F177B66B30084472A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7E177B66B30084472A /* QuartzCore.framework */; };
 		89007E82177B67100084472A /* ProductModal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89007E80177B67100084472A /* ProductModal.xcdatamodeld */; };
+		89007E84177B687E0084472A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E83177B687E0084472A /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		89007E7C177B66A80084472A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		89007E7E177B66B30084472A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		89007E81177B67100084472A /* ProductModal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModal.xcdatamodel; sourceTree = "<group>"; };
+		89007E83177B687E0084472A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				89007E7F177B66B30084472A /* QuartzCore.framework in Frameworks */,
 				89007E7D177B66A80084472A /* CoreVideo.framework in Frameworks */,
 				89007E7B177B66960084472A /* AVFoundation.framework in Frameworks */,
+				89007E84177B687E0084472A /* libiconv.dylib in Frameworks */,
 				89007E75177B666B0084472A /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +147,6 @@
 		89007E02177B662B0084472A = {
 			isa = PBXGroup;
 			children = (
-				89007E7E177B66B30084472A /* QuartzCore.framework */,
-				89007E7C177B66A80084472A /* CoreVideo.framework */,
-				89007E7A177B66960084472A /* AVFoundation.framework */,
-				89007E55177B663E0084472A /* CoreMedia.framework */,
 				89007E16177B662B0084472A /* ToxinScanner */,
 				89007E44177B662B0084472A /* ToxinScannerTests */,
 				89007E0D177B662B0084472A /* Frameworks */,
@@ -167,6 +166,11 @@
 		89007E0D177B662B0084472A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89007E83177B687E0084472A /* libiconv.dylib */,
+				89007E7E177B66B30084472A /* QuartzCore.framework */,
+				89007E7C177B66A80084472A /* CoreVideo.framework */,
+				89007E7A177B66960084472A /* AVFoundation.framework */,
+				89007E55177B663E0084472A /* CoreMedia.framework */,
 				89007E57177B666B0084472A /* ZBarSDK */,
 				89007E0E177B662B0084472A /* UIKit.framework */,
 				89007E10177B662B0084472A /* Foundation.framework */,
