@@ -20,9 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    /*
     CTDataController *tmpData = [[CTDataController alloc] init];
     [tmpData clearStores];
     tmpData = nil;
+     */
     
     
     self.dataController = [CTDataController shared];

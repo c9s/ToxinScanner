@@ -69,7 +69,19 @@
     
     // ADD: present a barcode reader that scans from the camera feed
     ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    
     reader.readerDelegate = (id) self;
+    
+    /*
+    reader.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    reader.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+     */
+    /*
+    if ([ZBarReaderController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+        reader.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+     */
+    
     reader.supportedOrientationsMask = ZBarOrientationMaskAll;
     
     ZBarImageScanner *scanner = reader.scanner;
@@ -84,6 +96,29 @@
     [self presentModalViewController: reader
                             animated: YES];
     // [reader release];
+}
+
+
+- (void) createNewProduct: (NSString*)barcodeId type:(NSString*) barcodeType
+{
+    CTDataController *data = [CTDataController shared];
+    
+    NSManagedObjectContext *context = [data.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[data.fetchedResultsController fetchRequest] entity];
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    
+    [newManagedObject setValue:[NSDate date] forKey:@"createdAt"];
+    [newManagedObject setValue:barcodeId forKey:@"barcodeId"];
+    [newManagedObject setValue:barcodeType forKey:@"barcodeType"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 
@@ -117,8 +152,7 @@
  didFinishPickingMediaWithInfo: (NSDictionary*) info
 {
     // ADD: get the decode results
-    id<NSFastEnumeration> results =
-    [info objectForKey: ZBarReaderControllerResults];
+    id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
     
     
     ZBarSymbol *symbol = nil;
@@ -134,10 +168,14 @@
     NSLog([ZBarSymbol nameForType: symbol.type]);
     NSLog(symbol.data);
     
-    // EXAMPLE: do something useful with the barcode image
-    // resultImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    [self createNewProduct:symbol.data
+                      type: [ZBarSymbol nameForType: symbol.type]];
     
-    // ADD: dismiss the controller (NB dismiss from the *reader*!)
+    NSString * typeName = [ZBarSymbol nameForType: symbol.type];
+    
+    self.imageView.image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    self.barcodeTextField.text = symbol.data;
+    self.barcodeTypeTextField.text = typeName;
     [reader dismissModalViewControllerAnimated: YES];
 }
 

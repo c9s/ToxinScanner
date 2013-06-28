@@ -22,6 +22,9 @@
 
 @property (nonatomic, unsafe_unretained, readwrite) id <CTAddRecordViewControllerDelegate> delegate;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic) BOOL barcodeScannerLaunched;
+@property (weak, nonatomic) IBOutlet UITextField *barcodeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *barcodeTypeTextField;
 
 @end
