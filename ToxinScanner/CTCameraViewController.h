@@ -49,4 +49,6 @@
 
 @interface CTCameraViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+- (IBAction)showImagePickerForCamera:(id)sender;
+
 @end

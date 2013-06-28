@@ -84,7 +84,8 @@
     }
 
     self.imagePickerController = imagePickerController;
-    [self presentViewController:self.imagePickerController animated:YES completion:nil];
+    // [self presentModalViewController:self.imagePickerController animated:YES completion:nil];
+    [self presentModalViewController:self.imagePickerController animated:YES];
 }
 
 
