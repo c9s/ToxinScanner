@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CTDataController.h"
 
 @interface CTAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,7 +17,10 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (strong, nonatomic) CTDataController *dataController;
+
 - (void)saveContext;
+
 - (NSURL *)applicationDocumentsDirectory;
 
 @end

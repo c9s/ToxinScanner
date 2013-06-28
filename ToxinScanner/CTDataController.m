@@ -16,7 +16,7 @@
 
 static CTDataController *sharedObject;
 
-+ (CTDataController*) shared
++ (CTDataController* ) shared
 {
     if (sharedObject == nil) {
         sharedObject = [[super allocWithZone:NULL] init];
