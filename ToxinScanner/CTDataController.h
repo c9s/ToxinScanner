@@ -12,9 +12,13 @@
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 + (CTDataController* ) shared;
+
+- (void)saveContext;
+
+- (void) clearStores;
 
 - (NSURL *)applicationDocumentsDirectory;
 @end

@@ -37,7 +37,6 @@
 		89007E7B177B66960084472A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7A177B66960084472A /* AVFoundation.framework */; };
 		89007E7D177B66A80084472A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7C177B66A80084472A /* CoreVideo.framework */; };
 		89007E7F177B66B30084472A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7E177B66B30084472A /* QuartzCore.framework */; };
-		89007E82177B67100084472A /* ProductModal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89007E80177B67100084472A /* ProductModal.xcdatamodeld */; };
 		89007E84177B687E0084472A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E83177B687E0084472A /* libiconv.dylib */; };
 		89007E86177B6B530084472A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89007E85177B6B530084472A /* OverlayView.xib */; };
 		89007E89177B6B600084472A /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* APLViewController.m */; };
@@ -114,7 +113,6 @@
 		89007E7A177B66960084472A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		89007E7C177B66A80084472A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		89007E7E177B66B30084472A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		89007E81177B67100084472A /* ProductModal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModal.xcdatamodel; sourceTree = "<group>"; };
 		89007E83177B687E0084472A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		89007E85177B6B530084472A /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		89007E87177B6B600084472A /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 				89007E34177B662B0084472A /* CTDetailViewController.h */,
 				89007E35177B662B0084472A /* CTDetailViewController.m */,
 				89007E2E177B662B0084472A /* ToxinScanner.xcdatamodeld */,
-				89007E80177B67100084472A /* ProductModal.xcdatamodeld */,
 				89007E17177B662B0084472A /* Supporting Files */,
 			);
 			path = ToxinScanner;
@@ -442,7 +439,6 @@
 				89FF8F7F177D1FE5001AD04E /* APLViewController.m in Sources */,
 				89007E33177B662B0084472A /* CTMasterViewController.m in Sources */,
 				89007E36177B662B0084472A /* CTDetailViewController.m in Sources */,
-				89007E82177B67100084472A /* ProductModal.xcdatamodeld in Sources */,
 				89873FB8177D2728000EF5EE /* CTAddRecordViewController.m in Sources */,
 				89873FBD177D3CAF000EF5EE /* CTDataController.m in Sources */,
 			);
@@ -665,16 +661,6 @@
 			);
 			currentVersion = 89007E2F177B662B0084472A /* ToxinScanner.xcdatamodel */;
 			path = ToxinScanner.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		89007E80177B67100084472A /* ProductModal.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				89007E81177B67100084472A /* ProductModal.xcdatamodel */,
-			);
-			currentVersion = 89007E81177B67100084472A /* ProductModal.xcdatamodel */;
-			path = ProductModal.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -19,8 +19,4 @@
 
 @property (strong, nonatomic) CTDataController *dataController;
 
-- (void)saveContext;
-
-- (NSURL *)applicationDocumentsDirectory;
-
 @end

@@ -24,6 +24,37 @@ static CTDataController *sharedObject;
     return sharedObject;
 }
 
+- (void) clearStores {
+    NSArray *stores = [self.persistentStoreCoordinator persistentStores];
+    for(NSPersistentStore *store in stores) {
+        [self.persistentStoreCoordinator removePersistentStore:store error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:store.URL.path error:nil];
+        
+        for (NSManagedObject *ct in [self.managedObjectContext registeredObjects]) {
+            [self.managedObjectContext deleteObject:ct];
+        }
+        
+        //recreates the persistent store
+        [[self.managedObjectContext persistentStoreCoordinator] addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:store.URL options:nil error:nil];
+
+    }
+    _persistentStoreCoordinator = nil;
+}
+
+
+- (void)saveContext
+{
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+}
 
 #pragma mark - Core Data stack
 
@@ -66,6 +97,9 @@ static CTDataController *sharedObject;
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ToxinScanner.sqlite"];
     
     NSError *error = nil;
+    
+    // XXX: [[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&error];
+    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         /*

@@ -105,6 +105,8 @@
     // EXAMPLE: do something useful with the barcode data
     // resultText.text = symbol.data;
     
+    
+    NSLog([ZBarSymbol nameForType: symbol.type]);
     NSLog(symbol.data);
     
     // EXAMPLE: do something useful with the barcode image
