@@ -39,11 +39,11 @@
 		89007E7F177B66B30084472A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E7E177B66B30084472A /* QuartzCore.framework */; };
 		89007E84177B687E0084472A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89007E83177B687E0084472A /* libiconv.dylib */; };
 		89007E86177B6B530084472A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89007E85177B6B530084472A /* OverlayView.xib */; };
-		89007E89177B6B600084472A /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* APLViewController.m */; };
+		89007E89177B6B600084472A /* CTCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* CTCameraViewController.m */; };
 		89873FB8177D2728000EF5EE /* CTAddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89873FB7177D2728000EF5EE /* CTAddRecordViewController.m */; };
 		89873FBA177D2833000EF5EE /* CTAddRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89873FB9177D2833000EF5EE /* CTAddRecordView.xib */; };
 		89873FBD177D3CAF000EF5EE /* CTDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89873FBC177D3CAF000EF5EE /* CTDataController.m */; };
-		89FF8F7F177D1FE5001AD04E /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* APLViewController.m */; };
+		89FF8F7F177D1FE5001AD04E /* CTCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* CTCameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +115,8 @@
 		89007E7E177B66B30084472A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		89007E83177B687E0084472A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		89007E85177B6B530084472A /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
-		89007E87177B6B600084472A /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
-		89007E88177B6B600084472A /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		89007E87177B6B600084472A /* CTCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCameraViewController.h; sourceTree = "<group>"; };
+		89007E88177B6B600084472A /* CTCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCameraViewController.m; sourceTree = "<group>"; };
 		89873FB6177D2728000EF5EE /* CTAddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAddRecordViewController.h; sourceTree = "<group>"; };
 		89873FB7177D2728000EF5EE /* CTAddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAddRecordViewController.m; sourceTree = "<group>"; };
 		89873FB9177D2833000EF5EE /* CTAddRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTAddRecordView.xib; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				89007E85177B6B530084472A /* OverlayView.xib */,
-				89007E87177B6B600084472A /* APLViewController.h */,
-				89007E88177B6B600084472A /* APLViewController.m */,
+				89007E87177B6B600084472A /* CTCameraViewController.h */,
+				89007E88177B6B600084472A /* CTCameraViewController.m */,
 				89007E1F177B662B0084472A /* CTAppDelegate.h */,
 				89007E20177B662B0084472A /* CTAppDelegate.m */,
 				89873FBB177D3CAF000EF5EE /* CTDataController.h */,
@@ -436,7 +436,7 @@
 				89007E1D177B662B0084472A /* main.m in Sources */,
 				89007E30177B662B0084472A /* ToxinScanner.xcdatamodeld in Sources */,
 				89007E21177B662B0084472A /* CTAppDelegate.m in Sources */,
-				89FF8F7F177D1FE5001AD04E /* APLViewController.m in Sources */,
+				89FF8F7F177D1FE5001AD04E /* CTCameraViewController.m in Sources */,
 				89007E33177B662B0084472A /* CTMasterViewController.m in Sources */,
 				89007E36177B662B0084472A /* CTDetailViewController.m in Sources */,
 				89873FB8177D2728000EF5EE /* CTAddRecordViewController.m in Sources */,
@@ -449,7 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89007E4C177B662B0084472A /* ToxinScannerTests.m in Sources */,
-				89007E89177B6B600084472A /* APLViewController.m in Sources */,
+				89007E89177B6B600084472A /* CTCameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

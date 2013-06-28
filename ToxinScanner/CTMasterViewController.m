@@ -8,7 +8,7 @@
 
 #import "CTMasterViewController.h"
 #import "CTDetailViewController.h"
-#import "APLViewController.h"
+#import "CTCameraViewController.h"
 #import "CTAddRecordViewController.h"
 
 @interface CTMasterViewController ()
@@ -248,7 +248,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"createdAt"] description];
+    cell.textLabel.text = [[object valueForKey:@"barcodeId"] description];
 }
 
 @end

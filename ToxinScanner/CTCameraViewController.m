@@ -1,6 +1,6 @@
-#import "APLViewController.h"
+#import "CTCameraViewController.h"
 
-@interface APLViewController ()
+@interface CTCameraViewController ()
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation APLViewController
+@implementation CTCameraViewController
 
 
 - (void)viewDidLoad

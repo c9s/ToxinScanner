@@ -47,6 +47,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface APLViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface CTCameraViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end

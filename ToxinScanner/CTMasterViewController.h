@@ -11,12 +11,12 @@
 @class CTDetailViewController;
 
 #import <CoreData/CoreData.h>
-#import "APLViewController.h"
+#import "CTCameraViewController.h"
 
 @interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) CTDetailViewController *detailViewController;
-@property (strong, nonatomic) APLViewController *aplViewController;
+@property (strong, nonatomic) CTCameraViewController *aplViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

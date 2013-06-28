@@ -27,4 +27,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *barcodeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *barcodeTypeTextField;
 
+@property (weak, nonatomic) NSManagedObject * currentRecord;
+
 @end

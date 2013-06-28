@@ -8,6 +8,7 @@
 
 #import "CTAddRecordViewController.h"
 #import "CTDataController.h"
+#import "CTCameraViewController.h"
 
 @interface CTAddRecordViewController ()
 
@@ -63,6 +64,14 @@
 	// [self dismissModalViewControllerAnimated:YES];
 }
 
+
+- (void) runProductImageCapturer {
+    CTCameraViewController *cameraController = [[CTCameraViewController alloc] init];
+    // cameraController.delegate = (id) self;
+    // [self presentViewController:addController animated:YES completion: nil];
+    [self presentModalViewController:cameraController animated:YES];
+}
+
 - (void)runBarCodeScanner {
     
     // [self dismissModalViewControllerAnimated:YES];
@@ -75,6 +84,8 @@
     /*
     reader.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     reader.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+     
+     http://stackoverflow.com/questions/10782660/i-can-not-use-sourcetype-as-uiimagepickercontrollersourcetypephotolibrary-in-zba
      */
     /*
     if ([ZBarReaderController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
@@ -99,7 +110,7 @@
 }
 
 
-- (void) createNewProduct: (NSString*)barcodeId type:(NSString*) barcodeType
+- (NSManagedObject *) createNewProduct: (NSString*)barcodeId type:(NSString*) barcodeType
 {
     CTDataController *data = [CTDataController shared];
     
@@ -119,6 +130,7 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    return newManagedObject;
 }
 
 
@@ -168,8 +180,10 @@
     NSLog([ZBarSymbol nameForType: symbol.type]);
     NSLog(symbol.data);
     
-    [self createNewProduct:symbol.data
+    self.currentRecord = [self createNewProduct:symbol.data
                       type: [ZBarSymbol nameForType: symbol.type]];
+    
+    
     
     NSString * typeName = [ZBarSymbol nameForType: symbol.type];
     
