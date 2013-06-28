@@ -9,6 +9,7 @@
 #import "CTMasterViewController.h"
 #import "CTDetailViewController.h"
 #import "APLViewController.h"
+#import "CTAddRecordViewController.h"
 
 @interface CTMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -35,14 +36,22 @@
     
     
     // dynamically create a addButton
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                  target:self
+                                  action:@selector(showAddRecordViewController:)];
+                                  // action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    // self.navigationItem.rightBarButtonItems
+    // self.navigationItem.leftBarButtonItems
+    
+    
     
     
     // manage the detailViewController object
     self.detailViewController = (CTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    self.aplViewController = [APLViewController new];
+    // self.aplViewController = [APLViewController new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,11 +121,17 @@
 }
 
 
+- (void)showAddRecordViewController: (id) sender
+{
+    CTAddRecordViewController *controller = [[CTAddRecordViewController alloc] init];
+    // controller.delegate = self;
+    [self presentViewController:controller animated:YES completion: nil];
+    // [self runBarCodeScanner];
+}
+
+
 - (void)insertNewObject:(id)sender
 {
-    [self runBarCodeScanner];
-    return;
-    
     
     
     
