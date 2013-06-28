@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTAddRecordViewController : UIViewController
+@class CTAddRecordViewController;
+
+@protocol CTAddRecordViewControllerDelegate <NSObject>
+
+@optional // Delegate protocols
+
+- (void)dismissAddRecordViewController:(CTAddRecordViewController *) viewController;
+
+@end
+
+@interface CTAddRecordViewController : UIViewController <ZBarReaderDelegate>
+
+@property (nonatomic, unsafe_unretained, readwrite) id <CTAddRecordViewControllerDelegate> delegate;
+
+@property (nonatomic) BOOL barcodeScannerLaunched;
 
 @end

@@ -13,7 +13,7 @@
 #import <CoreData/CoreData.h>
 #import "APLViewController.h"
 
-@interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,ZBarReaderDelegate>
+@interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) CTDetailViewController *detailViewController;
 @property (strong, nonatomic) APLViewController *aplViewController;
