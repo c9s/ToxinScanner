@@ -7,8 +7,8 @@
 //
 
 #import "CTMasterViewController.h"
-
 #import "CTDetailViewController.h"
+#import "APLViewController.h"
 
 @interface CTMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -41,6 +41,8 @@
     
     // manage the detailViewController object
     self.detailViewController = (CTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    self.aplViewController = [APLViewController new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +83,11 @@
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) orient
 {
     return(YES);
+}
+
+
+- (void)captureCamera {
+
 }
 
 

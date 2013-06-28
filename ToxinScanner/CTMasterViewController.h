@@ -15,6 +15,7 @@
 @interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,ZBarReaderDelegate>
 
 @property (strong, nonatomic) CTDetailViewController *detailViewController;
+@property (strong, nonatomic) APLViewController *aplViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
