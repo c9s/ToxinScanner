@@ -43,6 +43,7 @@
 		89007E89177B6B600084472A /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* APLViewController.m */; };
 		89873FB8177D2728000EF5EE /* CTAddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89873FB7177D2728000EF5EE /* CTAddRecordViewController.m */; };
 		89873FBA177D2833000EF5EE /* CTAddRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89873FB9177D2833000EF5EE /* CTAddRecordView.xib */; };
+		89873FBD177D3CAF000EF5EE /* CTDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89873FBC177D3CAF000EF5EE /* CTDataController.m */; };
 		89FF8F7F177D1FE5001AD04E /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007E88177B6B600084472A /* APLViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,8 @@
 		89873FB6177D2728000EF5EE /* CTAddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAddRecordViewController.h; sourceTree = "<group>"; };
 		89873FB7177D2728000EF5EE /* CTAddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAddRecordViewController.m; sourceTree = "<group>"; };
 		89873FB9177D2833000EF5EE /* CTAddRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTAddRecordView.xib; sourceTree = "<group>"; };
+		89873FBB177D3CAF000EF5EE /* CTDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDataController.h; sourceTree = "<group>"; };
+		89873FBC177D3CAF000EF5EE /* CTDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				89007E88177B6B600084472A /* APLViewController.m */,
 				89007E1F177B662B0084472A /* CTAppDelegate.h */,
 				89007E20177B662B0084472A /* CTAppDelegate.m */,
+				89873FBB177D3CAF000EF5EE /* CTDataController.h */,
+				89873FBC177D3CAF000EF5EE /* CTDataController.m */,
 				89007E28177B662B0084472A /* MainStoryboard_iPhone.storyboard */,
 				89007E2B177B662B0084472A /* MainStoryboard_iPad.storyboard */,
 				89007E31177B662B0084472A /* CTMasterViewController.h */,
@@ -439,6 +444,7 @@
 				89007E36177B662B0084472A /* CTDetailViewController.m in Sources */,
 				89007E82177B67100084472A /* ProductModal.xcdatamodeld in Sources */,
 				89873FB8177D2728000EF5EE /* CTAddRecordViewController.m in Sources */,
+				89873FBD177D3CAF000EF5EE /* CTDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
