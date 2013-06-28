@@ -11,6 +11,7 @@
 @class CTDetailViewController;
 
 #import <CoreData/CoreData.h>
+#import "APLViewController.h"
 
 @interface CTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,ZBarReaderDelegate>
 
