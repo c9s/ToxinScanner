@@ -81,7 +81,7 @@
 }
 
 
-- (void)insertNewObject:(id)sender
+- (void) insertNewObject:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
