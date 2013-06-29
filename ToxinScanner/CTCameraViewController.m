@@ -52,13 +52,10 @@
 
 - (void)showImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
 {
-    if (self.imageView.isAnimating)
-    {
+    if (self.imageView.isAnimating) {
         [self.imageView stopAnimating];
     }
-
-    if (self.capturedImages.count > 0)
-    {
+    if (self.capturedImages.count > 0) {
         [self.capturedImages removeAllObjects];
     }
 

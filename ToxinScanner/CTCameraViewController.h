@@ -47,7 +47,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTCameraViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface CTCameraViewController : UIImagePickerController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 - (IBAction)showImagePickerForCamera:(id)sender;
 
