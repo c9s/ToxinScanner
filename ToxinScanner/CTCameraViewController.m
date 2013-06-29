@@ -2,18 +2,6 @@
 
 @interface CTCameraViewController ()
 
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
-
-@property (nonatomic, weak) IBOutlet UIToolbar *toolBar;
-
-@property (nonatomic) IBOutlet UIView *overlayView;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *takePictureButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *startStopButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *delayedPhotoButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
-
-@property (nonatomic, weak) NSTimer *cameraTimer;
-@property (nonatomic) NSMutableArray *capturedImages;
 
 @end
 
@@ -36,19 +24,7 @@
 }
 
 
-- (IBAction)showImagePickerForCamera:(id)sender
-{
-    [self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
-}
-
-
-- (IBAction)showImagePickerForPhotoPicker:(id)sender
-{
-    [self showImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-}
-
-
-- (void)showImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
+- (void) initImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType owner: (id) owner
 {
     if (self.imageView.isAnimating) {
         [self.imageView stopAnimating];
@@ -72,13 +48,16 @@
         /*
          Load the overlay view from the OverlayView nib file. Self is the File's Owner for the nib file, so the overlayView outlet is set to the main view in the nib. Pass that view to the image picker controller to use as its overlay view, and set self's reference to the view to nil.
          */
-        [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
-        self.overlayView.frame = self.cameraOverlayView.frame;
+        [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:owner options:nil];
+        self.overlayView.frame = self.cameraOverlayView.frame;  // cameraOverlayView is from UIImagePicker
+        
+        // assign new overlay view to the UIImagePicker cameraOverlayView
         self.cameraOverlayView = self.overlayView;
+        
+        // release oiur own overlay view
         self.overlayView = nil;
     }
 
-    // self.self = imagePickerController;
     // [self presentModalViewController:self.imagePickerController animated:YES completion:nil];
     // [self presentModalViewController:self animated:YES];
 }
@@ -108,7 +87,7 @@
     // These controls can't be used until the photo has been taken
     self.doneButton.enabled = NO;
     self.takePictureButton.enabled = NO;
-    self.delayedPhotoButton.enabled = NO;
+    // self.delayedPhotoButton.enabled = NO;
     self.startStopButton.enabled = NO;
 
     NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:5.0];
@@ -133,7 +112,7 @@
     [self.startStopButton setAction:@selector(stopTakingPicturesAtIntervals:)];
 
     self.doneButton.enabled = NO;
-    self.delayedPhotoButton.enabled = NO;
+    // self.delayedPhotoButton.enabled = NO;
     self.takePictureButton.enabled = NO;
 
     self.cameraTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timedPhotoFire:) userInfo:nil repeats:YES];

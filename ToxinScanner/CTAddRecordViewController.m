@@ -69,6 +69,11 @@
 
 
 - (void) runProductImageCapturer {
+    CTCameraViewController *cameraController = [[CTCameraViewController alloc] init];
+    [cameraController initImagePickerForSourceType: UIImagePickerControllerSourceTypeCamera owner: self];
+    // [self presentModalViewController: cameraController animated:YES];
+    
+    // [cameraController showImagePickerForCamera:nil];
     /*
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
@@ -96,7 +101,7 @@
 
     // cameraController.delegate = (id) self;
     // [self presentViewController:addController animated:YES completion: nil];
-    // [self presentModalViewController:cameraController animated:YES];
+    // [self presentModalViewController: cameraController animated:YES];
 }
 
 - (void)runBarCodeScanner {
@@ -204,23 +209,22 @@
     // resultText.text = symbol.data;
     
     
-    NSLog([ZBarSymbol nameForType: symbol.type]);
-    NSLog(symbol.data);
-    
-    self.currentRecord = [self createNewProduct:symbol.data
-                      type: [ZBarSymbol nameForType: symbol.type]];
-    
-    
-    
-    NSString * typeName = [ZBarSymbol nameForType: symbol.type];
-    
-    // self.imageView.image = [info objectForKey: UIImagePickerControllerOriginalImage];
-    
-    self.barcodeTextField.text = symbol.data;
-    self.barcodeTypeTextField.text = typeName;
-    [reader dismissModalViewControllerAnimated: YES];
-    
-    
+    if (symbol) {
+        NSLog([ZBarSymbol nameForType: symbol.type]);
+        NSLog(symbol.data);
+        self.currentRecord = [self createNewProduct:symbol.data
+                          type: [ZBarSymbol nameForType: symbol.type]];
+        
+        
+        
+        NSString * typeName = [ZBarSymbol nameForType: symbol.type];
+        
+        // self.imageView.image = [info objectForKey: UIImagePickerControllerOriginalImage];
+        
+        self.barcodeTextField.text = symbol.data;
+        self.barcodeTypeTextField.text = typeName;
+        [reader dismissModalViewControllerAnimated: YES];
+    }
 }
 
 

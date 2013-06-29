@@ -65,12 +65,6 @@
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="249500637"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="744244003">
-								<string key="IBUITitle">Delayed</string>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="249500637"/>
-							</object>
 							<object class="IBUIBarButtonItem" id="938315134">
 								<string key="IBUITitle">Start</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -109,46 +103,6 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">delayedPhotoButton</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="744244003"/>
-					</object>
-					<int key="connectionID">36</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">startStopButton</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="938315134"/>
-					</object>
-					<int key="connectionID">24</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">takePictureButton</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="584114460"/>
-					</object>
-					<int key="connectionID">34</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">doneButton</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="226470082"/>
-					</object>
-					<int key="connectionID">33</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">overlayView</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="668506845"/>
-					</object>
-					<int key="connectionID">42</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="668506845"/>
@@ -162,6 +116,38 @@
 						<reference key="destination" ref="249500637"/>
 					</object>
 					<int key="connectionID">44</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">overlayView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="668506845"/>
+					</object>
+					<int key="connectionID">47</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">doneButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="226470082"/>
+					</object>
+					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">takePictureButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="584114460"/>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">startStopButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="938315134"/>
+					</object>
+					<int key="connectionID">50</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -178,14 +164,6 @@
 						<reference key="destination" ref="841351856"/>
 					</object>
 					<int key="connectionID">27</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">delayedTakePhoto:</string>
-						<reference key="source" ref="744244003"/>
-						<reference key="destination" ref="841351856"/>
-					</object>
-					<int key="connectionID">32</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -277,7 +255,6 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="353039866"/>
 							<reference ref="938315134"/>
-							<reference ref="744244003"/>
 							<reference ref="584114460"/>
 							<reference ref="226470082"/>
 						</array>
@@ -292,11 +269,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
 						<reference key="object" ref="938315134"/>
-						<reference key="parent" ref="249500637"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="744244003"/>
 						<reference key="parent" ref="249500637"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -335,7 +307,6 @@
 				<boolean value="NO" key="13.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="17.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="18.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="37.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -352,7 +323,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">44</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -363,7 +334,6 @@
 						<string key="delayedTakePhoto:">id</string>
 						<string key="done:">id</string>
 						<string key="showImagePickerForCamera:">id</string>
-						<string key="showImagePickerForPhotoPicker:">id</string>
 						<string key="startTakingPicturesAtIntervals:">id</string>
 						<string key="stopTakingPicturesAtIntervals:">id</string>
 						<string key="takePhoto:">id</string>
@@ -379,10 +349,6 @@
 						</object>
 						<object class="IBActionInfo" key="showImagePickerForCamera:">
 							<string key="name">showImagePickerForCamera:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showImagePickerForPhotoPicker:">
-							<string key="name">showImagePickerForPhotoPicker:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="startTakingPicturesAtIntervals:">

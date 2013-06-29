@@ -49,6 +49,21 @@
 
 @interface CTCameraViewController : UIImagePickerController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+
+@property (nonatomic, weak) IBOutlet UIToolbar *toolBar;
+
+@property (nonatomic) IBOutlet UIView *overlayView;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *takePictureButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *startStopButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *delayedPhotoButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
+
+@property (nonatomic, weak) NSTimer *cameraTimer;
+@property (nonatomic) NSMutableArray *capturedImages;
+
 - (IBAction)showImagePickerForCamera:(id)sender;
+- (void) initImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType owner: (id) owner;
 
 @end
