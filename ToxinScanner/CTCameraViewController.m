@@ -12,8 +12,6 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *delayedPhotoButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
 
-@property (nonatomic) UIImagePickerController *imagePickerController;
-
 @property (nonatomic, weak) NSTimer *cameraTimer;
 @property (nonatomic) NSMutableArray *capturedImages;
 
@@ -59,30 +57,30 @@
         [self.capturedImages removeAllObjects];
     }
 
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    imagePickerController.sourceType = sourceType;
-    imagePickerController.delegate = self;
+    // UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    self.sourceType = sourceType;
+    // self.delegate = self;
     
     if (sourceType == UIImagePickerControllerSourceTypeCamera)
     {
         /*
          The user wants to use the camera interface. Set up our custom overlay view for the camera.
          */
-        imagePickerController.showsCameraControls = NO;
+        self.showsCameraControls = NO;
 
         /*
          Load the overlay view from the OverlayView nib file. Self is the File's Owner for the nib file, so the overlayView outlet is set to the main view in the nib. Pass that view to the image picker controller to use as its overlay view, and set self's reference to the view to nil.
          */
         [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
-        self.overlayView.frame = imagePickerController.cameraOverlayView.frame;
-        imagePickerController.cameraOverlayView = self.overlayView;
+        self.overlayView.frame = self.cameraOverlayView.frame;
+        self.cameraOverlayView = self.overlayView;
         self.overlayView = nil;
     }
 
-    self.imagePickerController = imagePickerController;
+    // self.self = imagePickerController;
     // [self presentModalViewController:self.imagePickerController animated:YES completion:nil];
-    [self presentModalViewController:self.imagePickerController animated:YES];
+    // [self presentModalViewController:self animated:YES];
 }
 
 
@@ -101,7 +99,7 @@
 
 - (IBAction)takePhoto:(id)sender
 {
-    [self.imagePickerController takePicture];
+    [self takePicture];
 }
 
 
@@ -177,7 +175,7 @@
         [self.capturedImages removeAllObjects];
     }
 
-    self.imagePickerController = nil;
+    // self.imagePickerController = nil;
 }
 
 
@@ -186,7 +184,7 @@
 // Called by the timer to take a picture.
 - (void)timedPhotoFire:(NSTimer *)timer
 {
-    [self.imagePickerController takePicture];
+    [self takePicture];
 }
 
 
